@@ -6,6 +6,6 @@ The repository contains a program which loads books/texts and returns most simil
 Put books/texts in text format in the books folder. 
 To run the program type this:
 ```
-./main.py <method> 
+./main.py method
 ```
-<method> can be "collocation" for using NLTK collocations and "tfidf" for using TFIDF method. 
+*method* can be "collocation" for using NLTK collocations and "tfidf" for using TFIDF method. 
