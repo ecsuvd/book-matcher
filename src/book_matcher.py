@@ -24,7 +24,7 @@ class Book_Matcher:
     def closest_texts(self, vector, text_titles):
         max3 = heapq.nlargest(4, enumerate(vector), key=lambda x: x[1])
         indexes = [x[0] for x in max3[1:4]]
-        return [(text_titles[i], vector[i]) for i in indexes]
+        return [(text_titles[i], "{:.3g}".format(vector[i])) for i in indexes]
         
     def get_closest_books(self, calc_method):
         # Preparing texts for the analysis

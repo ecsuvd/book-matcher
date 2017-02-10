@@ -4,6 +4,7 @@ Command-line starter for score matching text analysis of books
 """
 import sys
 import src.book_matcher
+from pprint import pprint
 
 def main(argv):
     if len(argv) > 0:
@@ -16,7 +17,7 @@ def main(argv):
             sys.exit(1)
         book_matcher = src.book_matcher.Book_Matcher()
         closest_match_list = book_matcher.get_closest_books(calc_method)
-        print(closest_match_list)
+        pprint(closest_match_list)
     else:
         print("Error: no arguments provided")
         sys.exit(1)
